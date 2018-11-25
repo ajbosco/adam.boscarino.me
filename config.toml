@@ -17,6 +17,7 @@ pygmentscodefencesguesssyntax = true
   avatarurl = "images/me.jpg"
   hideCredits = false
   hideCopyright = false
+  inverted = true
 
 [[params.social]]
   medium = "twitter"
