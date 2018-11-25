@@ -2,6 +2,7 @@
 date = "2018-11-21"
 title = "Introducing dag-factory"
 slug = "introducing-dag-factory" 
+description = "generate Airflow DAGs from YAML configs"
 +++
 
 [Apache Airflow](https://github.com/apache/incubator-airflow) is "a platform to programmatically author, schedule, and monitor workflows." And it is currently having its *moment*. At [DataEngConf NYC 2018](https://www.dataengconf.com/speakers-nyc18), it seemed like every other talk was either about or mentioned Airflow. There have also been [countless](https://medium.com/making-meetup/data-pipeline-infrastructure-at-meetup-with-fewer-nightmares-running-apache-airflow-on-kubernetes-54cb8cdc69c3) [blog](https://medium.com/bluecore-engineering/were-all-using-airflow-wrong-and-how-to-fix-it-a56f14cb0753) [posts](https://bostata.com/post/built-to-scale-running-highly-concurrent-etl-with-apache-airflow/) about how different companies are using the tool and it even has a [podcast](https://soundcloud.com/the-airflow-podcast)!
