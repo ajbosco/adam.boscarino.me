@@ -67,18 +67,18 @@ pygmentscodefencesguesssyntax = true
   url = "mailto:adam@boscarino.me"
 
 [[menu.main]]
-    name = "About"
+    name = "ABOUT"
     weight = 1
     url = "/about/"
 [[menu.main]]
-    name = "Work"
+    name = "WORK"
     weight = 2
     url = "/work/"
 [[menu.main]]
-    name = "Talks"
+    name = "TALKS"
     weight = 3
     url = "/talks/"
 [[menu.main]]
-    name = "Blog"
+    name = "BLOG"
     weight = 4
     url  = "/posts/"
