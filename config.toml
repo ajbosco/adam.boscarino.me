@@ -55,6 +55,12 @@ pygmentscodefencesguesssyntax = true
   url = "https://www.goodreads.com/ajbosco"
 
 [[params.social]]
+  name = "Medium"
+  icon = "fab fa-medium"
+  weight = 6
+  url = "https://medium.com/@ajbosco"
+
+[[params.social]]
   name = "email"
   icon = "fas fa-envelope fa-2x"
   weight = 6

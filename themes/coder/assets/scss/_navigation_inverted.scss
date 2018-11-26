@@ -24,19 +24,30 @@ body.inverted {
       }
     }
     #menu-toggle {
+      display: none;
       @media only screen and (max-width : 768px) {
         &:checked + label {
-          color: $alt-bg-color-inverted;
+          color: $alt-bg-color;
+        }
+        &:checked + label + ul {
+          visibility: visible;
+          opacity: 1;
+          max-height: 100rem;
         }
       }
     }
     .menu-button {
       display: none;
       @media only screen and (max-width : 768px) {
+        display: block;
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 6.0rem;
         color: $fg-color-inverted;
+        cursor: pointer;
         &:hover,
         &:focus {
-          color: $link-color-inverted;
+          color: $link-color-inverted
         }
       }
     }
