@@ -4,7 +4,9 @@ weight = 20
 draft = false
 +++
 
-I'm currently a Senior Data Engineer at [DigitalOcean](https://www.digitalocean.com/) working with open-source data tools like Apache Spark, Kafka, and Airflow.
+I'm currently the managing the Data team at [Promoboxx](https://www.promoboxx.com). We're working on building out a data platform on AWS.
+
+Previously, I was at [DigitalOcean](https://www.digitalocean.com/) working with open-source data tools like Apache Spark, Kafka, and Airflow.
 
 Before that, I worked at [Fitbit](https://www.fitbit.com/) making sure all your steps were properly counted using tools like Luigi, Looker, and Snowflake.
 
