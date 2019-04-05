@@ -4,7 +4,7 @@ weight = 20
 draft = false
 +++
 
-I'm currently the managing the Data team at [Promoboxx](https://www.promoboxx.com). We're working on building out a data platform on AWS.
+I'm currently working to improve healthcare in America at [Devoted Health](https://www.devoted.com).
 
 Previously, I was at [DigitalOcean](https://www.digitalocean.com/) working with open-source data tools like Apache Spark, Kafka, and Airflow.
 
