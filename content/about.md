@@ -4,7 +4,7 @@ weight = 10
 draft = false
 +++
 
-Hi, I'm Adam. I'm a **Data Engineer** based in [Cambridge, MA](https://en.wikipedia.org/wiki/Cambridge,_Massachusetts). I mainly develop in Python, but firmly believe in using the right tool for the job whether that be Scala, SQL, Golang, or something new. I'm particularly interested in solving data problems with open-source tools, and I constantly search for ways to improve myself and my skillset. Check out some of my work and the projects I'm interested in on [GitHub](https://github.com/ajbosco).
+Hi, I'm Adam. I'm a **Data Engineer** based in [Jamaica Plain, MA](https://en.wikipedia.org/wiki/Jamaica_Plain). I mainly develop in Python, but firmly believe in using the right tool for the job whether that be Scala, SQL, Golang, or something new. I'm particularly interested in solving data problems with open-source tools, and I constantly search for ways to improve myself and my skillset. Check out some of my work and the projects I'm interested in on [GitHub](https://github.com/ajbosco).
 
 My non-tech hobbies include:
 
