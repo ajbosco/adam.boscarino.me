@@ -5,9 +5,10 @@ theme = "coder"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 googleAnalytics = "UA-112552117-1"
-pygmentsstyle = "b2"
+pygmentsstyle = "solarized-dark"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
+
 
 [params]
   info = "Data Engineer - Craft Beer Enthusiast - Sports Fan"

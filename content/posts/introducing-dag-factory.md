@@ -11,13 +11,13 @@ A major use case for Airflow seems to be ETL or ELT or ETTL or whatever acronym 
 
 The [dag-factory](https://github.com/ajbosco/dag-factory) library makes it easy to create DAGs from YAML configuration by following a few steps. First, install dag-factory into your Airflow environment:
 
-```
+```shell
 pip install dag-factory
 ```
 
 Next create a YAML config in a place accessible to Airflow like this:
 
-```
+```yaml
 example_dag1:
   default_args:
     owner: 'example_owner'
@@ -40,7 +40,7 @@ example_dag1:
 
 Then create a `.py` file in your Airflow DAGs folder like this:
 
-```
+```python
 from airflow import DAG
 import dagfactory
 
