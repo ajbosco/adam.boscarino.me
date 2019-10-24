@@ -1,65 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Adam Boscarino</title>
-    <link>https://adam.boscarino.me/</link>
-    <description>Recent content on Adam Boscarino</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 21 Oct 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://adam.boscarino.me/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>About</title>
-      <link>https://adam.boscarino.me/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://adam.boscarino.me/about/</guid>
-      <description>Hi, I&amp;rsquo;m Adam. I&amp;rsquo;m a Data Engineer based in Jamaica Plain, MA. I mainly develop in Python, but firmly believe in using the right tool for the job whether that be Scala, SQL, Golang, or something new. I&amp;rsquo;m particularly interested in solving data problems with open-source tools, and I constantly search for ways to improve myself and my skillset. Check out some of my work and the projects I&amp;rsquo;m interested in on GitHub.</description>
-    </item>
-    
-    <item>
-      <title>Work</title>
-      <link>https://adam.boscarino.me/work/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://adam.boscarino.me/work/</guid>
-      <description>I&amp;rsquo;m currently working to improve healthcare in America at Devoted Health.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Adam Boscarino</title><link>https://adam.boscarino.me/</link><description>Recent content on Adam Boscarino</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 21 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://adam.boscarino.me/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://adam.boscarino.me/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://adam.boscarino.me/about/</guid><description>Hi, I&amp;rsquo;m Adam. I&amp;rsquo;m a Data Engineer based in Jamaica Plain, MA. I mainly develop in Python, but firmly believe in using the right tool for the job whether that be Scala, SQL, Golang, or something new. I&amp;rsquo;m particularly interested in solving data problems with open-source tools, and I constantly search for ways to improve myself and my skillset. Check out some of my work and the projects I&amp;rsquo;m interested in on GitHub.</description></item><item><title>Work</title><link>https://adam.boscarino.me/work/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://adam.boscarino.me/work/</guid><description>I&amp;rsquo;m currently working to improve healthcare in America at Devoted Health.
 Previously, I was at DigitalOcean working with open-source data tools like Apache Spark, Kafka, and Airflow.
 Before that, I worked at Fitbit making sure all your steps were properly counted using tools like Luigi, Looker, and Snowflake.
 Prior to that, I helped create and lead the Business Intelligence team at Carbonite.
-Even earlier, I began my data journey at Oco, a small BI software shop that was acquired by Deloitte.</description>
-    </item>
-    
-    <item>
-      <title>Talks</title>
-      <link>https://adam.boscarino.me/talks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://adam.boscarino.me/talks/</guid>
-      <description> NYC Data Engineering Meetup - Airflow at DigitalOcean  [slides]   </description>
-    </item>
-    
-    <item>
-      <title>Apache Airflow at Devoted Health</title>
-      <link>https://adam.boscarino.me/posts/airflow-at-devoted-health/</link>
-      <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://adam.boscarino.me/posts/airflow-at-devoted-health/</guid>
-      <description>Apache Airflow is an open-source workflow orchestration tool. There are many posts available that explain the core concepts of Airflow (I recommend this one). This post assumes you have some familiarity with these concepts and focuses on how we develop, test, and deploy Airflow and Airflow DAGs at Devoted Health. Devoted is a Medicare Advantage startup aimed at making healthcare easier, more affordable, and believes every member should be treated like we would treat a member of our own family.</description>
-    </item>
-    
-    <item>
-      <title>Introducing dag-factory</title>
-      <link>https://adam.boscarino.me/posts/introducing-dag-factory/</link>
-      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://adam.boscarino.me/posts/introducing-dag-factory/</guid>
-      <description>Apache Airflow is &amp;ldquo;a platform to programmatically author, schedule, and monitor workflows.&amp;rdquo; And it is currently having its moment. At DataEngConf NYC 2018, it seemed like every other talk was either about or mentioned Airflow. There have also been countless blog posts about how different companies are using the tool and it even has a podcast!
-A major use case for Airflow seems to be ETL or ELT or ETTL or whatever acronym we are using today for moving data in batches from production systems to data warehouses.</description>
-    </item>
-    
-  </channel>
-</rss>
+Even earlier, I began my data journey at Oco, a small BI software shop that was acquired by Deloitte.</description></item><item><title>Talks</title><link>https://adam.boscarino.me/talks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://adam.boscarino.me/talks/</guid><description> NYC Data Engineering Meetup - Airflow at DigitalOcean [slides]</description></item><item><title>Apache Airflow at Devoted Health</title><link>https://adam.boscarino.me/posts/airflow-at-devoted-health/</link><pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate><guid>https://adam.boscarino.me/posts/airflow-at-devoted-health/</guid><description>Apache Airflow is an open-source workflow orchestration tool. There are many posts available that explain the core concepts of Airflow (I recommend this one). This post assumes you have some familiarity with these concepts and focuses on how we develop, test, and deploy Airflow and Airflow DAGs at Devoted Health. Devoted is a Medicare Advantage startup aimed at making healthcare easier, more affordable, and believes every member should be treated like we would treat a member of our own family.</description></item><item><title>Introducing dag-factory</title><link>https://adam.boscarino.me/posts/introducing-dag-factory/</link><pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate><guid>https://adam.boscarino.me/posts/introducing-dag-factory/</guid><description>Apache Airflow is &amp;ldquo;a platform to programmatically author, schedule, and monitor workflows.&amp;rdquo; And it is currently having its moment. At DataEngConf NYC 2018, it seemed like every other talk was either about or mentioned Airflow. There have also been countless blog posts about how different companies are using the tool and it even has a podcast!
+A major use case for Airflow seems to be ETL or ELT or ETTL or whatever acronym we are using today for moving data in batches from production systems to data warehouses.</description></item></channel></rss>
