@@ -5,7 +5,7 @@ theme = "coder"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 googleAnalytics = "UA-112552117-1"
-pygmentsstyle = "solarized-dark"
+pygmentsstyle = "monokailight"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
