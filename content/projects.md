@@ -9,4 +9,4 @@ These are a few of my personal projects. Find more at [GitHub](https://github.co
 * [dag-factory](https://github.com/ajbosco/dag-factory) - Python library for dynamically generating Apache Airflow DAGs from YAML configuration files.
 * [segment-config-go](https://github.com/ajbosco/segment-config-go) - Go client library for accessing the Segment Config API.
 * [terraform-provider-segment](https://github.com/ajbosco/terraform-provider-segment) - Terraform provider for Segment.
-* [reads](https://github.com/ajbosco/reads) - CLI interact with Goodreads.
+* [reads](https://github.com/ajbosco/reads) - CLI to interact with Goodreads.
