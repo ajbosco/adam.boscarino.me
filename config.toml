@@ -76,10 +76,14 @@ pygmentscodefencesguesssyntax = true
     weight = 2
     url = "/work/"
 [[menu.main]]
-    name = "TALKS"
+    name = "PROJECTS"
     weight = 3
+    url = "/projects/"
+[[menu.main]]
+    name = "TALKS"
+    weight = 4
     url = "/talks/"
 [[menu.main]]
     name = "BLOG"
-    weight = 4
+    weight = 5
     url  = "/posts/"
