@@ -11,14 +11,14 @@ pygmentscodefencesguesssyntax = true
 
 
 [params]
-  info = "Data Engineer - Craft Beer Enthusiast - Sports Fan"
+  info = "Data Engineer"
   author = "Adam Boscarino"
   description = 'Personal site for Adam Boscarino'
   keywords = "blog,developer,personal,data,engineer"
   avatarurl = "images/me.jpg"
   hideCredits = false
   hideCopyright = false
-  inverted = true
+  colorscheme = "dark"
 
 [[params.social]]
   medium = "twitter"
