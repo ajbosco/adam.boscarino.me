@@ -11,9 +11,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2.2.2
+      uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: '0.58.3'
+        hugo-version: 'latest'
         extended: true
     - name: Build
       run: |
@@ -21,7 +21,7 @@ jobs:
         cp CNAME ./public/CNAME
         cp robots.txt ./public/robots.txt
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.5.0
+      uses: peaceiris/actions-gh-pages@v3
       env:
         PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         PUBLISH_BRANCH: gh-pages
