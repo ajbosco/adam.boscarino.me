@@ -11,4 +11,4 @@ My non-tech hobbies include:
 * [Tottenham Hotspur](http://www.tottenhamhotspur.com/) (COYS!)
 * Visiting every used bookstore (Follow me on [GoodReads](https://www.goodreads.com/ajbosco))
 * Supporting my local breweries (and my non-local breweries too!)
-* My two cats; Mac & Cheese
+* My three cats; Mac, Cheese, and Itzy
