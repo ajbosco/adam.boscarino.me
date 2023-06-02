@@ -1,175 +1,30 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=author content="Adam Boscarino">
-<meta name=description content="Personal site for Adam Boscarino">
-<meta name=keywords content="blog,developer,personal,data,engineer">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Apache Airflow at Devoted Health">
-<meta name=twitter:description content="how we develop, test, and deploy Airflow">
-<meta property="og:title" content="Apache Airflow at Devoted Health">
-<meta property="og:description" content="how we develop, test, and deploy Airflow">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://adam.boscarino.me/posts/airflow-at-devoted-health/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2019-10-21T00:00:00+00:00">
-<meta property="article:modified_time" content="2019-10-21T00:00:00+00:00">
-<base href=https://adam.boscarino.me/posts/airflow-at-devoted-health/>
-<title>
-Apache Airflow at Devoted Health · Adam Boscarino
-</title>
-<link rel=canonical href=https://adam.boscarino.me/posts/airflow-at-devoted-health/>
-<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel=stylesheet>
-<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.11.2/css/all.css integrity=sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN crossorigin=anonymous>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin=anonymous>
-<link rel=stylesheet href=https://adam.boscarino.me/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin=anonymous media=screen>
-<link rel=stylesheet href=https://adam.boscarino.me/css/coder-dark.min.5efe5f122c926bde3c37546cb3804770b7cd5c2837919f0bbf752e632c0dd20f.css integrity="sha256-Xv5fEiySa948N1Rss4BHcLfNXCg3kZ8Lv3UuYywN0g8=" crossorigin=anonymous media=screen>
-<link rel=icon type=image/png href=https://adam.boscarino.me/images/favicon-32x32.png sizes=32x32>
-<link rel=icon type=image/png href=https://adam.boscarino.me/images/favicon-16x16.png sizes=16x16>
-<meta name=generator content="Hugo 0.91.2">
-</head>
-<body class=colorscheme-dark>
-<main class=wrapper>
-<nav class=navigation>
-<section class=container>
-<a class=navigation-title href=https://adam.boscarino.me/>
-HOME
-</a>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Adam Boscarino"><meta name=description content="Personal site for Adam Boscarino"><meta name=keywords content="blog,developer,personal,data,engineer"><meta name=twitter:card content="summary"><meta name=twitter:title content="Apache Airflow at Devoted Health"><meta name=twitter:description content="how we develop, test, and deploy Airflow"><meta property="og:title" content="Apache Airflow at Devoted Health"><meta property="og:description" content="how we develop, test, and deploy Airflow"><meta property="og:type" content="article"><meta property="og:url" content="https://adam.boscarino.me/posts/airflow-at-devoted-health/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2019-10-21T00:00:00+00:00"><meta property="article:modified_time" content="2019-10-21T00:00:00+00:00"><base href=https://adam.boscarino.me/posts/airflow-at-devoted-health/><title>Apache Airflow at Devoted Health · Adam Boscarino</title><link rel=canonical href=https://adam.boscarino.me/posts/airflow-at-devoted-health/><link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.11.2/css/all.css integrity=sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin=anonymous><link rel=stylesheet href=https://adam.boscarino.me/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin=anonymous media=screen><link rel=stylesheet href=https://adam.boscarino.me/css/coder-dark.min.5efe5f122c926bde3c37546cb3804770b7cd5c2837919f0bbf752e632c0dd20f.css integrity="sha256-Xv5fEiySa948N1Rss4BHcLfNXCg3kZ8Lv3UuYywN0g8=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=https://adam.boscarino.me/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=https://adam.boscarino.me/images/favicon-16x16.png sizes=16x16><meta name=generator content="Hugo 0.112.6"></head><body class=colorscheme-dark><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://adam.boscarino.me/>HOME</a>
 <input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fas fa-bars"></i></label>
-<ul class=navigation-list>
-<li class=navigation-item>
-<a class=navigation-link href=https://adam.boscarino.me/about/>ABOUT</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=https://adam.boscarino.me/work/>WORK</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=https://adam.boscarino.me/projects/>PROJECTS</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=https://adam.boscarino.me/talks/>TALKS</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=https://adam.boscarino.me/posts/>BLOG</a>
-</li>
-</ul>
-</section>
-</nav>
-<div class=content>
-<section class="container post">
-<article>
-<header>
-<div class=post-title>
-<h1 class=title>Apache Airflow at Devoted Health</h1>
-</div>
-<div class=post-meta>
-<div class=date>
-<span class=posted-on>
-<i class="fas fa-calendar"></i>
-<time datetime=2019-10-21T00:00:00Z>
-October 21, 2019
-</time>
-</span>
-<span class=reading-time>
-<i class="fas fa-clock"></i>
-8-minute read
-</span>
-</div>
-</div>
-</header>
-<div>
-<p><img src=https://adam.boscarino.me/images/airflow_at_devoted.png alt="Airflow @ Devoted"></p>
-<p><a href=https://github.com/apache/incubator-airflow>Apache Airflow</a> is an open-source workflow orchestration tool. There are many posts available that explain the core concepts of Airflow (I recommend this <a href=https://medium.com/@itunpredictable/apache-airflow-on-docker-for-complete-beginners-cf76cf7b2c9a>one</a>). This post assumes you have some familiarity with these concepts and focuses on how we develop, test, and deploy Airflow and Airflow DAGs at <a href=https://www.devoted.com>Devoted Health</a>. Devoted is a Medicare Advantage startup aimed at making healthcare easier, more affordable, and believes every member should be treated like we would treat a member of our own family.</p>
-<h2 id=airflow-deployment>Airflow Deployment</h2>
-<p><em>This part of the post discusses <a href=https://kubernetes.io/>Kubernetes</a>, <a href=https://helm.sh/>Helm</a>, <a href=https://www.terraform.io/>Terraform</a>, and <a href=https://www.docker.com/>Docker</a>, but since they are all their own complicated things, it does not go into detail about any of them.</em></p>
-<p>We have a very modern technology stack at Devoted, so of course, we run Airflow on Kubernetes. This means we use Docker containers to deploy all of our Airflow infrastructure. We have a single Docker image that is used for the Airflow Web Server, Scheduler, and most of our Tasks. It has a core set of Python dependencies installed, and whenever an update is made, it is built and deployed to <a href=https://aws.amazon.com/ecr/>Amazon ECR</a> via a CI job.</p>
-<p>We deploy Airflow itself using a Helm chart (based on this one in <a href=https://github.com/helm/charts/tree/master/stable/airflow>charts/stable</a>) that describes all of the Kubernetes resources (Deployments, Services, Persistent Volumes, etc.) we want for Airflow. We couple this with Terraform, which allows us to deploy a new instance of Airflow with a simple command like:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>terraform apply --target<span style=color:#ff79c6>=</span>module.airflow
-</code></pre></div><p>This command creates a RDS database, an EFS volume for DAG storage, a Kubernetes namespace, and Airflow Scheduler and Web Server pods.</p>
-<p>Notice that I didn’t mention any Airflow Workers. We recently migrated to Airflow&rsquo;s <a href=https://airflow.apache.org/kubernetes.html>Kubernetes Executor</a>, which has no permanent Workers and no Redis/Celery requirement for distributing work. Instead, every Airflow Task is run in its own pod. This means we can allocate resources for each Task rather than just having our workers sized for our most resource intensive jobs. Additionally, we can have a different Docker image for each Task. If a Data Scientist writes a complicated Machine Learning job that has many dependencies, this allows us to keep those separate from our core Airflow image. We’ve been running this setup for a few months now and it has been great for us so far.</p>
-<p><strong>TL;DR</strong></p>
-<ul>
-<li>We use Terraform and Helm to deploy Airflow to Kubernetes.</li>
-<li>We run Airflow using the Kubernetes Executor to allow for maximum flexibility in our DAG design and resource allocation.</li>
-</ul>
-<h2 id=dag-development>DAG Development</h2>
-<p>At Devoted, we have many different people working on Airflow DAGs including a team of 8 Data Scientists (they’re awesome and they’re <a href=https://jobs.lever.co/devoted/d0758ba1-3bde-42c6-9981-b28f2041e461>hiring</a>!). This has led to some unique challenges since often different people are working on different parts of the same DAG.</p>
-<p>We’ve solved this by developing an internal tool that allows each developer to spin up their own Airflow instance on Kubernetes (these are smaller than our Staging/Production environments) along with their own clone of our data warehouse (it’s a <a href=https://www.snowflake.com/>Snowflake</a> thing, you should use Snowflake it is also awesome). This tool is called <code>devflow</code> because I am not creative when it comes to naming things except my cats (<a href=https://www.instagram.com/mac.cheese.cat/>Mac & Cheese</a>). It wraps Helm, kubectl, and Terraform into a few simple commands so developers can run things like <code>devflow start</code> to start up their dev environment and <code>devflow sync</code> to deploy their local changes to their instance.</p>
-<p>Besides helping avoid collisions in DAG development, this setup allows developers to use the same technology and environments in Dev that we use in Staging/Prod creating far less “it works on my machine” scenarios.</p>
-<p>In addition to <code>devflow</code>, the Data Engineering team at Devoted has built another internal tool to streamline DAG development called <code>DAG Builder</code>. This library provides a simple interface for creating a new data pipeline in Airflow. Developers write a DDL query for an end table, a transformation in SQL or Python, and use a YAML file to describe the DAG.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#ff79c6>dag</span>: <span style=color:#f1fa8c>&#39;example_dag&#39;</span>
-<span style=color:#ff79c6>owner</span>: <span style=color:#f1fa8c>&#39;Data Science&#39;</span>
-<span style=color:#ff79c6>schedule</span>: <span style=color:#f1fa8c>&#39;30 */4 * * *&#39;</span>
- 
-<span style=color:#ff79c6>prep_schema</span>: <span style=color:#f1fa8c>&#39;staging&#39;</span>
-<span style=color:#ff79c6>final_schema</span>: <span style=color:#f1fa8c>&#39;warehouse&#39;</span>
-<span style=color:#ff79c6>base_path</span>: <span style=color:#f1fa8c>&#39;warehouse/example_dag/&#39;</span>
- 
-<span style=color:#ff79c6>tasks</span>:
- <span style=color:#ff79c6>dim_table</span>:
-   <span style=color:#ff79c6>config_type</span>: <span style=color:#f1fa8c>&#39;SqlTask&#39;</span>
-   <span style=color:#ff79c6>ddl</span>: <span style=color:#f1fa8c>&#39;ddl/dim_table.sql&#39;</span>
-   <span style=color:#ff79c6>sql</span>: <span style=color:#f1fa8c>&#39;extractors/dim_table.sql&#39;</span>
- 
- <span style=color:#ff79c6>fact_table</span>:
-   <span style=color:#ff79c6>config_type</span>: <span style=color:#f1fa8c>&#39;PythonTask&#39;</span>
-   <span style=color:#ff79c6>ddl</span>: <span style=color:#f1fa8c>&#39;ddl/fact_table.sql&#39;</span>
-   <span style=color:#ff79c6>python</span>: <span style=color:#f1fa8c>&#39;extractors/fact_table.py&#39;</span>
-   <span style=color:#ff79c6>deps</span>:
-     - dim_table
-</code></pre></div><p>The example above generates a DAG that populates two tables, one dependent on the other, and automatically includes alerting, monitoring, support for integration testing, and more. This approach has allowed us to standardize our DAGs, which makes adding new features/enhancements to all DAGs (like the data validation tests below) much easier and improves developer efficiency as Data Scientists can easily understand and work on pipelines they didn’t originally write.</p>
-<p><strong>TL;DR</strong></p>
-<ul>
-<li>Every developer at Devoted using Airflow gets their own dev instance.</li>
-<li>Standardizing DAGs allows Devoted to quickly add new features to all pipelines.</li>
-</ul>
-<h2 id=testing--validation>Testing & Validation</h2>
-<p>Ok, I’ve talked about how we deploy Airflow and develop DAGs, but how do we make sure they’re working and accurate? Well, obviously, it’s everyone’s favorite thing to the rescue &mldr;testing!</p>
-<p>We use three different types of tests to verify that DAGs are working as expected.</p>
-<h4 id=unit-tests>Unit Tests</h4>
-<p>All DAGs must pass a suite of unit tests in our CI pipeline before being deployed. These are tests that can be run independently of other resources and include a smoke test that validates every DAG can be imported into the Airflow DagBag (I will never not laugh when I type that) as well as tests for any python code used in our DAGs. We use <code>pytest</code> to run these and we feel they’re table stakes for testing.</p>
-<h4 id=integration-tests>Integration Tests</h4>
-<p>This set of tests interact with other resources, which is obviously very important for a workflow tool like Airflow that connects to a bunch of platforms. Thanks to the efforts of one of our Data Engineers, Julie Rice, we run end-to-end tests for most DAGs in another CI pipeline. This helps validate that our SQL doesn’t have errors and things like complicated CASE statements (who doesn’t love these?) produce the expected results in our data warehouse. This was a challenging thing to implement, but we believe the investment will pay off in increasing Developer confidence as they make changes.</p>
-<h4 id=data-validation>Data Validation</h4>
-<p>The third form of testing we use is the only one that doesn’t happen before deployments. Instead, data validation is done within each DAG at run-time. We have a set of standard tasks that allow Airflow Developers to specify things like “this column should be unique”, “this one should never be NULL”, or “this should have a record count greater than X”. This is the final protection we have against allowing our internal users to access reports with incorrect data.</p>
-<p><strong>TL;DR</strong></p>
-<ul>
-<li>Every Airflow DAG is tested before being deployed.</li>
-<li>We run end-to-end Integration Tests for most DAGs to reduce errors in Production.</li>
-<li>Data validation tasks run in each DAG to prevent incorrect data from getting into reports.</li>
-</ul>
-<h2 id=dag-deployment>DAG Deployment</h2>
-<p>We use a single <a href=https://aws.amazon.com/efs/>AWS EFS</a> volume to persistently store Airflow DAGs (and plugins) for each environment. It is shared amongst all of the pods in the Airflow namespace (Web Server, Scheduler, and Tasks), so we only need to push new/updated DAGs to one place for all of our resources. This is done via a simple CI job that runs once DAGs have passed our test suite described above. No old-school release cycle here, we deploy whenever a new change is ready, which happens many times per day.</p>
-<p><strong>TL;DR</strong></p>
-<ul>
-<li>This section is only a couple of sentences, just read it. :)</li>
-</ul>
-<h2 id=monitoring>Monitoring</h2>
-<p>I’ve gone over how we develop, test, and deploy Airflow, but saved my favorite for last. Monitoring AKA how we, the team in charge of keeping Airflow running, sleep soundly at night knowing it is, in fact, running.</p>
-<p>Our first line of defense against OpsGenie Alerts is a feature of Kubernetes called Liveness Checks. This allows you to signal to Kubernetes that your container is in a bad state and should be restarted. As all good technologists know, sometimes turning it off and on again is all it takes to fix something. For the Web Server, we simply use Airflow’s <code>/health</code> endpoint to verify it is up and running. For the Scheduler, we have a custom script that says the Scheduler needs to be restarted if there are more than 0 queued tasks, 0 running tasks, and 0 tasks completely recently.</p>
-<p>Liveness are nice for saving someone from a simple fix, but they’re not really monitoring. For that, the core Airflow project is heavily instrumented with <a href=https://github.com/apache/airflow/blob/master/airflow/stats.py#L106>statsd</a> metrics. We send all of these to <a href=https://www.datadoghq.com>DataDog</a> and use their dashboards to tell us about Airflow’s CPU and memory usage. Additionally, we have several DataDog monitors setup there that alert the team if key DAGs haven’t reported success in the expected time period. Airflow has a SLA feature that does something similar, but this allows us to decouple monitoring from the service.</p>
-<p><strong>TL;DR</strong></p>
-<ul>
-<li>We use Kubernetes Liveness Checks to restart pods that are in a bad state without human intervention.</li>
-<li>We use DataDog to monitor Airflow resource usage and get alerts about DAG SLAs.</li>
-</ul>
-<p>If working on and helping improve Devoted Health’s Airflow setup sounds interesting to you, we’re <a href=https://jobs.lever.co/devoted/>hiring</a>!</p>
-</div>
-<footer>
-</footer>
-</article>
-</section>
-</div>
-<footer class=footer>
-<section class=container>
-© 2022
+<label class="menu-button float-right" for=menu-toggle><i class="fas fa-bars"></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=https://adam.boscarino.me/about/>ABOUT</a></li><li class=navigation-item><a class=navigation-link href=https://adam.boscarino.me/work/>WORK</a></li><li class=navigation-item><a class=navigation-link href=https://adam.boscarino.me/projects/>PROJECTS</a></li><li class=navigation-item><a class=navigation-link href=https://adam.boscarino.me/talks/>TALKS</a></li><li class=navigation-item><a class=navigation-link href=https://adam.boscarino.me/posts/>BLOG</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title>Apache Airflow at Devoted Health</h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fas fa-calendar"></i>
+<time datetime=2019-10-21T00:00:00Z>October 21, 2019</time></span>
+<span class=reading-time><i class="fas fa-clock"></i>
+8-minute read</span></div></div></header><div><p><img src=https://adam.boscarino.me/images/airflow_at_devoted.png alt="Airflow @ Devoted"></p><p><a href=https://github.com/apache/incubator-airflow>Apache Airflow</a> is an open-source workflow orchestration tool. There are many posts available that explain the core concepts of Airflow (I recommend this <a href=https://medium.com/@itunpredictable/apache-airflow-on-docker-for-complete-beginners-cf76cf7b2c9a>one</a>). This post assumes you have some familiarity with these concepts and focuses on how we develop, test, and deploy Airflow and Airflow DAGs at <a href=https://www.devoted.com>Devoted Health</a>. Devoted is a Medicare Advantage startup aimed at making healthcare easier, more affordable, and believes every member should be treated like we would treat a member of our own family.</p><h2 id=airflow-deployment>Airflow Deployment</h2><p><em>This part of the post discusses <a href=https://kubernetes.io/>Kubernetes</a>, <a href=https://helm.sh/>Helm</a>, <a href=https://www.terraform.io/>Terraform</a>, and <a href=https://www.docker.com/>Docker</a>, but since they are all their own complicated things, it does not go into detail about any of them.</em></p><p>We have a very modern technology stack at Devoted, so of course, we run Airflow on Kubernetes. This means we use Docker containers to deploy all of our Airflow infrastructure. We have a single Docker image that is used for the Airflow Web Server, Scheduler, and most of our Tasks. It has a core set of Python dependencies installed, and whenever an update is made, it is built and deployed to <a href=https://aws.amazon.com/ecr/>Amazon ECR</a> via a CI job.</p><p>We deploy Airflow itself using a Helm chart (based on this one in <a href=https://github.com/helm/charts/tree/master/stable/airflow>charts/stable</a>) that describes all of the Kubernetes resources (Deployments, Services, Persistent Volumes, etc.) we want for Airflow. We couple this with Terraform, which allows us to deploy a new instance of Airflow with a simple command like:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>terraform apply --target<span style=color:#ff79c6>=</span>module.airflow
+</span></span></code></pre></div><p>This command creates a RDS database, an EFS volume for DAG storage, a Kubernetes namespace, and Airflow Scheduler and Web Server pods.</p><p>Notice that I didn’t mention any Airflow Workers. We recently migrated to Airflow&rsquo;s <a href=https://airflow.apache.org/kubernetes.html>Kubernetes Executor</a>, which has no permanent Workers and no Redis/Celery requirement for distributing work. Instead, every Airflow Task is run in its own pod. This means we can allocate resources for each Task rather than just having our workers sized for our most resource intensive jobs. Additionally, we can have a different Docker image for each Task. If a Data Scientist writes a complicated Machine Learning job that has many dependencies, this allows us to keep those separate from our core Airflow image. We’ve been running this setup for a few months now and it has been great for us so far.</p><p><strong>TL;DR</strong></p><ul><li>We use Terraform and Helm to deploy Airflow to Kubernetes.</li><li>We run Airflow using the Kubernetes Executor to allow for maximum flexibility in our DAG design and resource allocation.</li></ul><h2 id=dag-development>DAG Development</h2><p>At Devoted, we have many different people working on Airflow DAGs including a team of 8 Data Scientists (they’re awesome and they’re <a href=https://jobs.lever.co/devoted/d0758ba1-3bde-42c6-9981-b28f2041e461>hiring</a>!). This has led to some unique challenges since often different people are working on different parts of the same DAG.</p><p>We’ve solved this by developing an internal tool that allows each developer to spin up their own Airflow instance on Kubernetes (these are smaller than our Staging/Production environments) along with their own clone of our data warehouse (it’s a <a href=https://www.snowflake.com/>Snowflake</a> thing, you should use Snowflake it is also awesome). This tool is called <code>devflow</code> because I am not creative when it comes to naming things except my cats (<a href=https://www.instagram.com/mac.cheese.cat/>Mac & Cheese</a>). It wraps Helm, kubectl, and Terraform into a few simple commands so developers can run things like <code>devflow start</code> to start up their dev environment and <code>devflow sync</code> to deploy their local changes to their instance.</p><p>Besides helping avoid collisions in DAG development, this setup allows developers to use the same technology and environments in Dev that we use in Staging/Prod creating far less “it works on my machine” scenarios.</p><p>In addition to <code>devflow</code>, the Data Engineering team at Devoted has built another internal tool to streamline DAG development called <code>DAG Builder</code>. This library provides a simple interface for creating a new data pipeline in Airflow. Developers write a DDL query for an end table, a transformation in SQL or Python, and use a YAML file to describe the DAG.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#ff79c6>dag</span>: <span style=color:#f1fa8c>&#39;example_dag&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>owner</span>: <span style=color:#f1fa8c>&#39;Data Science&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>schedule</span>: <span style=color:#f1fa8c>&#39;30 */4 * * *&#39;</span>
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span><span style=color:#ff79c6>prep_schema</span>: <span style=color:#f1fa8c>&#39;staging&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>final_schema</span>: <span style=color:#f1fa8c>&#39;warehouse&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>base_path</span>: <span style=color:#f1fa8c>&#39;warehouse/example_dag/&#39;</span>
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span><span style=color:#ff79c6>tasks</span>:
+</span></span><span style=display:flex><span> <span style=color:#ff79c6>dim_table</span>:
+</span></span><span style=display:flex><span>   <span style=color:#ff79c6>config_type</span>: <span style=color:#f1fa8c>&#39;SqlTask&#39;</span>
+</span></span><span style=display:flex><span>   <span style=color:#ff79c6>ddl</span>: <span style=color:#f1fa8c>&#39;ddl/dim_table.sql&#39;</span>
+</span></span><span style=display:flex><span>   <span style=color:#ff79c6>sql</span>: <span style=color:#f1fa8c>&#39;extractors/dim_table.sql&#39;</span>
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span> <span style=color:#ff79c6>fact_table</span>:
+</span></span><span style=display:flex><span>   <span style=color:#ff79c6>config_type</span>: <span style=color:#f1fa8c>&#39;PythonTask&#39;</span>
+</span></span><span style=display:flex><span>   <span style=color:#ff79c6>ddl</span>: <span style=color:#f1fa8c>&#39;ddl/fact_table.sql&#39;</span>
+</span></span><span style=display:flex><span>   <span style=color:#ff79c6>python</span>: <span style=color:#f1fa8c>&#39;extractors/fact_table.py&#39;</span>
+</span></span><span style=display:flex><span>   <span style=color:#ff79c6>deps</span>:
+</span></span><span style=display:flex><span>     - dim_table
+</span></span></code></pre></div><p>The example above generates a DAG that populates two tables, one dependent on the other, and automatically includes alerting, monitoring, support for integration testing, and more. This approach has allowed us to standardize our DAGs, which makes adding new features/enhancements to all DAGs (like the data validation tests below) much easier and improves developer efficiency as Data Scientists can easily understand and work on pipelines they didn’t originally write.</p><p><strong>TL;DR</strong></p><ul><li>Every developer at Devoted using Airflow gets their own dev instance.</li><li>Standardizing DAGs allows Devoted to quickly add new features to all pipelines.</li></ul><h2 id=testing--validation>Testing & Validation</h2><p>Ok, I’ve talked about how we deploy Airflow and develop DAGs, but how do we make sure they’re working and accurate? Well, obviously, it’s everyone’s favorite thing to the rescue &mldr;testing!</p><p>We use three different types of tests to verify that DAGs are working as expected.</p><h4 id=unit-tests>Unit Tests</h4><p>All DAGs must pass a suite of unit tests in our CI pipeline before being deployed. These are tests that can be run independently of other resources and include a smoke test that validates every DAG can be imported into the Airflow DagBag (I will never not laugh when I type that) as well as tests for any python code used in our DAGs. We use <code>pytest</code> to run these and we feel they’re table stakes for testing.</p><h4 id=integration-tests>Integration Tests</h4><p>This set of tests interact with other resources, which is obviously very important for a workflow tool like Airflow that connects to a bunch of platforms. Thanks to the efforts of one of our Data Engineers, Julie Rice, we run end-to-end tests for most DAGs in another CI pipeline. This helps validate that our SQL doesn’t have errors and things like complicated CASE statements (who doesn’t love these?) produce the expected results in our data warehouse. This was a challenging thing to implement, but we believe the investment will pay off in increasing Developer confidence as they make changes.</p><h4 id=data-validation>Data Validation</h4><p>The third form of testing we use is the only one that doesn’t happen before deployments. Instead, data validation is done within each DAG at run-time. We have a set of standard tasks that allow Airflow Developers to specify things like “this column should be unique”, “this one should never be NULL”, or “this should have a record count greater than X”. This is the final protection we have against allowing our internal users to access reports with incorrect data.</p><p><strong>TL;DR</strong></p><ul><li>Every Airflow DAG is tested before being deployed.</li><li>We run end-to-end Integration Tests for most DAGs to reduce errors in Production.</li><li>Data validation tasks run in each DAG to prevent incorrect data from getting into reports.</li></ul><h2 id=dag-deployment>DAG Deployment</h2><p>We use a single <a href=https://aws.amazon.com/efs/>AWS EFS</a> volume to persistently store Airflow DAGs (and plugins) for each environment. It is shared amongst all of the pods in the Airflow namespace (Web Server, Scheduler, and Tasks), so we only need to push new/updated DAGs to one place for all of our resources. This is done via a simple CI job that runs once DAGs have passed our test suite described above. No old-school release cycle here, we deploy whenever a new change is ready, which happens many times per day.</p><p><strong>TL;DR</strong></p><ul><li>This section is only a couple of sentences, just read it. :)</li></ul><h2 id=monitoring>Monitoring</h2><p>I’ve gone over how we develop, test, and deploy Airflow, but saved my favorite for last. Monitoring AKA how we, the team in charge of keeping Airflow running, sleep soundly at night knowing it is, in fact, running.</p><p>Our first line of defense against OpsGenie Alerts is a feature of Kubernetes called Liveness Checks. This allows you to signal to Kubernetes that your container is in a bad state and should be restarted. As all good technologists know, sometimes turning it off and on again is all it takes to fix something. For the Web Server, we simply use Airflow’s <code>/health</code> endpoint to verify it is up and running. For the Scheduler, we have a custom script that says the Scheduler needs to be restarted if there are more than 0 queued tasks, 0 running tasks, and 0 tasks completely recently.</p><p>Liveness are nice for saving someone from a simple fix, but they’re not really monitoring. For that, the core Airflow project is heavily instrumented with <a href=https://github.com/apache/airflow/blob/master/airflow/stats.py#L106>statsd</a> metrics. We send all of these to <a href=https://www.datadoghq.com>DataDog</a> and use their dashboards to tell us about Airflow’s CPU and memory usage. Additionally, we have several DataDog monitors setup there that alert the team if key DAGs haven’t reported success in the expected time period. Airflow has a SLA feature that does something similar, but this allows us to decouple monitoring from the service.</p><p><strong>TL;DR</strong></p><ul><li>We use Kubernetes Liveness Checks to restart pods that are in a bad state without human intervention.</li><li>We use DataDog to monitor Airflow resource usage and get alerts about DAG SLAs.</li></ul><p>If working on and helping improve Devoted Health’s Airflow setup sounds interesting to you, we’re <a href=https://jobs.lever.co/devoted/>hiring</a>!</p></div><footer></footer></article></section></div><footer class=footer><section class=container>© 2023
 Adam Boscarino
 ·
-Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
-</section>
-</footer>
-</main>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-112552117-1','auto'),ga('send','pageview'))</script>
-</body>
-</html>
+Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-112552117-1","auto"),ga("send","pageview"))</script></body></html>
