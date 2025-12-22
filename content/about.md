@@ -9,6 +9,8 @@ Hi, I'm Adam. I'm a **Data Engineer** based in [Alexandria, VA](https://en.wikip
 My non-tech hobbies include:
 
 * [Tottenham Hotspur](http://www.tottenhamhotspur.com/) (COYS!)
-* Visiting every used bookstore (Follow me on [GoodReads](https://www.goodreads.com/ajbosco))
+* Visiting every used bookstore (Follow me on [StoryGraph](https://app.thestorygraph.com/profile/ajbosco))
+* Working out in my home gym
+* Using the 500 different coffee brewers I've acquired
 * Supporting my local breweries (and my non-local breweries too!)
 * My three cats; Mac, Cheese, and Itzy
