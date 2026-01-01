@@ -10,13 +10,13 @@ draft = false
 
 ## 2025
 
-2025 was a year of perservence through injury with one epic highlight. 
+2025 was a year of perseverance through injury with one epic highlight. 
 
-- 💻 1,890 GitHub contributions
+- 💻 1,896 GitHub contributions
 - 🗣️ 365 days of Duolingo
 - 🏋️ 310 days closing exercise ring
 - 🏃 65 min avg daily exercise
-- 📚 43 books read
+- 📚 45 books read
 - ⛳ 18 rounds of golf
 - 💉 4 elbow injections
 - 🇪🇸 1 country visited
