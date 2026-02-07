@@ -1,0 +1,44 @@
+<div class="sidebar-inner">
+  <div class="sidebar-header">
+    {{ with .Site.Params.avatarurl }}
+      <div class="sidebar-avatar">
+        <a href="{{ $.Site.BaseURL | relLangURL }}">
+          <img src="{{ . | relURL }}" alt="avatar">
+        </a>
+      </div>
+    {{ end }}
+</div>
+
+  <nav class="sidebar-nav">
+    <ul>
+      {{ range sort .Site.Menus.main }}
+        <li{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>
+          <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+
+  <div class="sidebar-social">
+    {{ with .Site.Params.social }}
+      <ul>
+        {{ range sort . "weight" }}
+          {{ if .icon }}
+            <li>
+              <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }}>
+                <i class="{{ .icon }}" aria-hidden="true"></i>
+              </a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+
+  <div class="sidebar-footer">
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </button>
+    <p>&copy; {{ now.Year }} {{ .Site.Params.author }}</p>
+  </div>
+</div>

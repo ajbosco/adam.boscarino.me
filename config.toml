@@ -15,27 +15,23 @@ pygmentscodefencesguesssyntax = true
   author = "Adam Boscarino"
   description = 'Personal site for Adam Boscarino'
   keywords = "blog,developer,personal,data,engineer"
-  avatarurl = "images/me.jpg"
+  avatarurl = "images/logo.png"
   hideCredits = false
   hideCopyright = false
-  colorscheme = "dark"
+  colorscheme = "auto"
+  custom_css = ["/css/sidebar.css"]
 
 [[params.social]]
-  medium = "twitter"
-  icon = "twitter"
-  link = "https://twitter.com/ajbosco"
-
-[[params.social]]
-  name = "Github"
+  name = "GitHub"
   icon = "fab fa-github fa-2x"
   weight = 1
   url = "https://github.com/ajbosco"
 
 [[params.social]]
-  name = "Gitlab"
-  icon = "fab fa-gitlab fa-2x"
+  name = "LinkedIn"
+  icon = "fab fa-linkedin fa-2x"
   weight = 2
-  url = "https://gitlab.com/ajboscarino"
+  url = "https://www.linkedin.com/in/adam-boscarino-47267313"
 
 [[params.social]]
   name = "Twitter"
@@ -44,50 +40,34 @@ pygmentscodefencesguesssyntax = true
   url = "https://twitter.com/ajbosco/"
 
 [[params.social]]
-  name = "linkedin"
-  icon = "fab fa-linkedin fa-2x"
-  weight = 4
-  url = "https://www.linkedin.com/in/adam-boscarino-47267313"
-
-[[params.social]]
-  name = "goodreads"
-  icon = "fab fa-goodreads fa-2x"
-  weight = 5
-  url = "https://www.goodreads.com/ajbosco"
-
-[[params.social]]
   name = "Medium"
-  icon = "fab fa-medium"
-  weight = 6
+  icon = "fab fa-medium fa-2x"
+  weight = 4
   url = "https://medium.com/@ajbosco"
 
 [[params.social]]
-  name = "email"
+  name = "Email"
   icon = "fas fa-envelope fa-2x"
-  weight = 6
+  weight = 5
   url = "mailto:adam@boscarino.me"
 
 [[menu.main]]
-    name = "ABOUT"
+    name = "Work"
     weight = 1
-    url = "/about/"
-[[menu.main]]
-    name = "WORK"
-    weight = 2
     url = "/work/"
 [[menu.main]]
-    name = "PROJECTS"
+    name = "Projects"
     weight = 3
     url = "/projects/"
 [[menu.main]]
-    name = "TALKS"
+    name = "Talks"
     weight = 4
     url = "/talks/"
 [[menu.main]]
-    name = "YEAR IN REVIEW"
+    name = "Year in Review"
     weight = 5
     url = "/year-in-review/"
 [[menu.main]]
-    name = "BLOG"
+    name = "Writing"
     weight = 6
     url  = "/posts/"
