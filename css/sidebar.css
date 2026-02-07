@@ -1,0 +1,425 @@
+/* ==========================================
+   Sidebar Layout
+   ========================================== */
+
+/* Hide the checkbox toggle */
+.sidebar-toggle {
+  display: none;
+}
+
+/* Two-column layout */
+.site-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Override the theme's default wrapper */
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ==========================================
+   Sidebar
+   ========================================== */
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 100;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2.4rem 2rem;
+}
+
+/* Sidebar header: avatar + name + info */
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.sidebar-avatar {
+  margin-bottom: 1.2rem;
+}
+
+.sidebar-avatar img {
+  width: 100px;
+  height: auto;
+}
+
+.sidebar-name {
+  font-family: Lato, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.3;
+}
+
+.sidebar-name a {
+  text-decoration: none;
+}
+
+.sidebar-info {
+  font-family: Lato, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.7;
+}
+
+/* ==========================================
+   Sidebar Navigation
+   ========================================== */
+.sidebar-nav {
+  margin-bottom: 2.4rem;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin: 0;
+}
+
+.sidebar-nav li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  font-family: Lato, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav li.active a {
+  text-decoration: none;
+}
+
+/* ==========================================
+   Sidebar Social Icons
+   ========================================== */
+.sidebar-social {
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.sidebar-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.sidebar-social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  text-decoration: none;
+}
+
+.sidebar-social li a:hover,
+.sidebar-social li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-social li a i {
+  font-size: 1.6rem !important;
+}
+
+/* ==========================================
+   Sidebar Footer
+   ========================================== */
+.sidebar-footer {
+  padding-top: 1.6rem;
+  text-align: center;
+}
+
+.sidebar-footer p {
+  font-size: 1.2rem;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+body.colorscheme-dark .theme-toggle {
+  color: #ffb86c;
+  border-color: rgba(255, 184, 108, 0.3);
+}
+
+body.colorscheme-dark .theme-toggle:hover {
+  background-color: rgba(255, 184, 108, 0.1);
+}
+
+body.colorscheme-light .theme-toggle {
+  color: #1565c0;
+  border-color: rgba(21, 101, 192, 0.3);
+}
+
+body.colorscheme-light .theme-toggle:hover {
+  background-color: rgba(21, 101, 192, 0.08);
+}
+
+/* ==========================================
+   Main Content Area
+   ========================================== */
+.main-content {
+  flex: 1;
+  margin-left: 260px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content > .content {
+  flex: 1;
+  margin-top: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.main-content .container {
+  max-width: 80rem;
+}
+
+/* ==========================================
+   Top Bar
+   ========================================== */
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.top-bar-name {
+  font-family: Lato, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.top-bar-name:hover,
+.top-bar-name:focus {
+  text-decoration: none;
+}
+
+body.colorscheme-dark .top-bar {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+body.colorscheme-dark .top-bar-name {
+  color: #ffffff;
+}
+
+body.colorscheme-light .top-bar {
+  border-bottom-color: #e0e0e0;
+}
+
+body.colorscheme-light .top-bar-name {
+  color: #212121;
+}
+
+/* Hide mobile menu button on desktop */
+.mobile-menu-btn {
+  display: none;
+}
+
+/* Hide overlay on desktop */
+.sidebar-overlay {
+  display: none;
+}
+
+/* Hide old theme navigation */
+.navigation {
+  display: none !important;
+}
+
+/* ==========================================
+   Dark Mode Colors
+   ========================================== */
+body.colorscheme-dark .sidebar {
+  background-color: #1a1c25;
+}
+
+body.colorscheme-dark .sidebar-name a {
+  color: #ffffff;
+}
+
+body.colorscheme-dark .sidebar-info {
+  color: #a0a0a0;
+}
+
+body.colorscheme-dark .sidebar-nav li a {
+  color: #c0c0c0;
+}
+
+body.colorscheme-dark .sidebar-nav li a:hover,
+body.colorscheme-dark .sidebar-nav li a:focus {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+body.colorscheme-dark .sidebar-nav li.active a {
+  color: #ffb86c;
+  background-color: rgba(255, 184, 108, 0.08);
+}
+
+body.colorscheme-dark .sidebar-social li a {
+  color: #a0a0a0;
+}
+
+body.colorscheme-dark .sidebar-social li a:hover,
+body.colorscheme-dark .sidebar-social li a:focus {
+  color: #ffb86c;
+  background-color: rgba(255, 184, 108, 0.1);
+}
+
+body.colorscheme-dark .sidebar {
+  border-right-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ==========================================
+   Light Mode Colors
+   ========================================== */
+body.colorscheme-light .sidebar {
+  background-color: #f0f0f0;
+  border-right-color: #e0e0e0;
+}
+
+body.colorscheme-light .sidebar-name a {
+  color: #212121;
+}
+
+body.colorscheme-light .sidebar-info {
+  color: #666;
+}
+
+body.colorscheme-light .sidebar-nav li a {
+  color: #444;
+}
+
+body.colorscheme-light .sidebar-nav li a:hover,
+body.colorscheme-light .sidebar-nav li a:focus {
+  color: #212121;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.colorscheme-light .sidebar-nav li.active a {
+  color: #1565c0;
+  background-color: rgba(21, 101, 192, 0.08);
+}
+
+body.colorscheme-light .sidebar-social li a {
+  color: #666;
+}
+
+body.colorscheme-light .sidebar-social li a:hover,
+body.colorscheme-light .sidebar-social li a:focus {
+  color: #1565c0;
+  background-color: rgba(21, 101, 192, 0.08);
+}
+
+/* ==========================================
+   Mobile (< 768px)
+   ========================================== */
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    width: 280px;
+    min-width: 280px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.2rem;
+    line-height: 1;
+  }
+
+  body.colorscheme-dark .mobile-menu-btn {
+    color: #ffffff;
+  }
+
+  body.colorscheme-light .mobile-menu-btn {
+    color: #212121;
+  }
+
+  /* Overlay behind sidebar when open */
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 95;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: default;
+  }
+
+  /* When sidebar is toggled open */
+  .sidebar-toggle:checked ~ .site-wrapper .sidebar {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle:checked ~ .sidebar-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .main-content > .content {
+    margin-top: 1.6rem;
+  }
+}
